@@ -1,0 +1,98 @@
+input {
+    background-color: rgb(52, 156, 241);
+    border-radius: 10px;
+    font-size: 15px;
+    border-color: white;
+    outline:none;
+    color: white;
+    padding-left: 15px;
+
+}
+
+::placeholder {
+    color: white;
+
+    font-size: 15px;
+    // margin-left: 0.5rem;
+    margin-top: 0.5rem;
+    padding-left: 2.6px;
+}
+
+.box1,
+.box2 {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.form-group {
+    // margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+}
+
+.box1 {
+    background: rgb(52, 156, 241);
+    font-family: Arial;
+    // font-size: medium;
+    color: #eee;
+    padding: 0%;
+
+}
+
+.form-group {
+    font-size: medium;
+    color: #eee;
+    margin-left: 170px;
+
+}
+
+.btn {
+    color: rgb(52, 156, 241);
+    background-color: #eee;
+    border-radius: 10px;
+
+
+}
+
+p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.input-mysize {
+    width: 350px;
+    height: 45px;
+}
+
+.image {
+    margin-left: 210px;
+    margin-top: 10px;
+}
+
+a {
+    color: white;
+    // background-color: transparent;
+    text-decoration: none;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 305px 10px;
+
+
+}
+
+.grid-item {
+    padding: 10px;
+}
+
+.container-fluid {
+    padding: 0% !important;
+    overflow:scroll; 
+}
+
+label {
+
+    font-size: 16px;
+}

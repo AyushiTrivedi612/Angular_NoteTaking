@@ -1,0 +1,93 @@
+<div class="container-fluid">
+  <div class="box1">
+    <div class="image">
+      <img src="assets/imgs/panamoure.png" width="50%">
+    </div>
+    <h2 class="text-center">Sign up </h2>
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <div class="form-group ">
+        <label for="first-name" text-align="start">First Name </label><br>
+        <input type="text" class="search-query input-mysize" formControlName="firstName" placeholder="First Name">
+        <div class="text-danger" *ngIf="(signupForm.controls['firstName'].hasError('required') && submitted)">
+          first name is required
+        </div>
+        <div class="text-danger" *ngIf="(signupForm.controls['firstName'].hasError('pattern') && submitted)">
+          Only alphabets are allowed
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="last-name">Last Name </label><br>
+        <input type="text" class="search-query input-mysize" formControlName="lastName" placeholder="Last Name">
+        <div class="text-danger" *ngIf="(signupForm.controls['lastName'].hasError('required') && submitted)">
+          last name is required
+        </div>
+        <div class="text-danger" *ngIf="(signupForm.controls['lastName'].hasError('pattern') && submitted)">
+          Only alphabets are allowed
+        </div>
+
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label><br>
+        <input type="email" class="search-query input-mysize" formControlName="email"
+          placeholder="Enter your Email"><br>
+        <!-- <span style="color: red;" *ngIf="email && email.invalid && email.touched ">
+                    Please enter a valid email
+                </span> -->
+        <div class="text-danger" *ngIf="(signupForm.controls['email'].hasError('required') && submitted)">
+          Email is required
+        </div>
+        <div class="text-danger" *ngIf="(signupForm.controls['email'].hasError('pattern') && submitted)">
+          Please enter a valid email
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password </label><br>
+        <div class="grid">
+          <input type="password" class="search-query input-mysize  " formControlName="password" placeholder="Password">
+          <!-- <i alt="hide" class="fa fa-eye-slash eye-hide grid-item" (click)="showPassword = !showPassword"
+          [class.hide]="!showPassword"></i> -->
+        </div>
+
+        <div class="text-danger" *ngIf="(signupForm.controls['password'].hasError('required') && submitted)">
+          Password is required.
+        </div>
+        <div class="text-danger" *ngIf="(signupForm.controls['password'].hasError('minlength') && submitted)">
+          Password should be atleast 5 characters long.
+        </div>
+        <div class="text-danger" *ngIf="(signupForm.controls['password'].hasError('maxlength') && submitted)">
+          Password should not be longer 20 characters .
+        </div>
+
+
+      </div>
+      <div class="form-group ">
+        <label for="confirm password">Confirm Password</label><br>
+        <div class="grid">
+          <input type="password" class="search-query input-mysize " formControlName="confirmpassword"
+            placeholder="Confirm Password">
+
+        </div>
+
+      </div>
+      <div class="text-danger" *ngIf="(signupForm.controls['confirmpassword'].hasError('required') && submitted)">
+        Confirm Password is required.
+      </div>
+      <div class="text-danger" *ngIf="(signupForm.controls['confirmpassword'].hasError('minlength') && submitted)">
+        Password should be atleast 5 characters long.
+      </div>
+      <div class="text-danger" *ngIf="(signupForm.controls['confirmpassword'].hasError('maxlength') && submitted)">
+        Password should not be longer 20 characters .
+      </div>
+
+      <div class="d-grid   col-6 mx-auto">
+        <button class="btn search-query input-mysize "><strong>Signup</strong></button>
+      </div>
+      <p>Already Sign up? <a routerLink="/login">Please Login </a></p>
+    </form>
+  </div>
+
+  <div class="box2"><img src="assets/imgs/img1.png" height="100%" width="100%"></div>
+</div>

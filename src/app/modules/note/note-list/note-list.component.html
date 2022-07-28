@@ -1,0 +1,17 @@
+<div class="container">
+  <h3 align="left">My Notes</h3>
+  <div class="text-center">
+    <button class="btn input-mysize" (click)="onAddClick()"><i class="fa fa-plus" aria-hidden="true"></i>
+      Add New  Notes</button>
+  </div>
+  
+  <div class="card-columns" *ngFor="let show of shows.slice(-2) " (click)="onNoteClick(show)">
+    <div class="card" >
+      <div>
+        <h6>{{show?.date }}</h6>
+        <h4 >{{show?.title}}</h4>
+        <p >{{show?.description}} </p>
+      </div>
+    </div>
+  </div>
+</div>

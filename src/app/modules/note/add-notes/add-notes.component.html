@@ -1,0 +1,17 @@
+<!-- <app-header></app-header> -->
+<div class="container">
+    <form [formGroup]="addNotesForm" (ngSubmit)="onSubmit()">
+        <h3>Add Notes</h3>
+        <div class="form-group">
+            <h5>Title</h5>
+            <input type="title" formControlName="title"  placeholder="Enter Title here">
+        </div>
+        <div class="form-group">
+           <h5>Description    </h5>
+            <textarea class="form-control" formControlName="description" style="height:350px;width:500px"></textarea>
+        </div>
+        <div class="text-center">
+            <button (click)="reloadCurrentPage()" class="input-mysize textarea">Add details</button>
+        </div>
+    </form>
+</div>

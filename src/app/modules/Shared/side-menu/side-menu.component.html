@@ -1,0 +1,31 @@
+<div class="row h-100">
+  <div id="menu">
+    <div class="container">
+      <div class="image">
+        <img src="assets/imgs/person.png">
+        <h5>{{userdetails?.firstName}}</h5>
+
+      </div>
+      <!-- Navigation links in sidebar-->
+      <div class="input-mysize menu" style="width: 270;">
+        <input type="text" placeholder="Search..">
+      </div>
+
+
+      <div class="menu2  ">
+        &nbsp;<i class="fa fa-book"></i>&nbsp;&nbsp;<button type="button" class="btn">My Notes</button>
+        <i class="fa fa-ellipsis-h"></i>&nbsp;
+      </div>
+
+      <div class="menu2  ">
+        &nbsp;<i class="fa fa-check"></i>&nbsp;&nbsp;<button type="button" class="btn">To-Do List</button>
+        <i class="fa fa-ellipsis-h"></i>&nbsp;
+      </div>
+      <div class="menu3 ">
+        &nbsp;<i class="fa fa-sign-out"></i>&nbsp;&nbsp;<button type="button" class="btn"
+          (click)="logout()">logout</button>
+      </div>
+    </div>
+  </div>
+
+</div>

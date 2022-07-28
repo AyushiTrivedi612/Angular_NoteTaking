@@ -1,0 +1,23 @@
+<!-- <div class="fixed-top"><app-header></app-header></div> -->
+
+
+<div class="box1">
+    <app-side-menu></app-side-menu>
+</div>
+<div class="box2">
+
+    <app-note-list (onAddNote)="onAddNote($event)" (selectedNote)="onNoteClick($event)"></app-note-list>
+</div>
+
+<div class="box3">  
+    <div class="vl">
+        <app-add-notes *ngIf="addNote"></app-add-notes>
+
+        <app-note-details *ngIf="!addNote" [note]="selectedNote"></app-note-details>
+    </div>
+   
+
+
+</div>
+
+<router-outlet></router-outlet>
